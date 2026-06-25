@@ -56,6 +56,57 @@ A real-time **peer-to-peer video conferencing application** built using **React*
 * User credentials are never stored in plain text.
 
 ---
+# 📂 Project Structure
+ ZOOM
+ │
+ ├── Backend
+ │   ├── src
+ │   │   ├── controllers
+ │   │   │   ├── socket.controller.js
+ │   │   │   └── user.controller.js
+ │   │   │
+ │   │   ├── init
+ │   │   │   └── connectDb.js
+ │   │   │
+ │   │   ├── models
+ │   │   │   ├── meeting.model.js
+ │   │   │   └── user.model.js
+ │   │   │
+ │   │   ├── routes
+ │   │   │   └── user.route.js
+ │   │   │
+ │   │   └── server.js
+ │   │
+ │   ├── .env
+ │   ├── package.json
+ │   └── package-lock.json
+ │
+ ├── frontend
+ │   ├── public
+ │   ├── src
+ │   │   ├── assets
+ │   │   ├── context
+ │   │   │   ├── AuthContext.jsx
+ │   │   │   └── HistoryContext.jsx
+ │   │   │
+ │   │   ├── pages
+ │   │   │   ├── Authentication.jsx
+ │   │   │   ├── Dashboard.jsx
+ │   │   │   ├── Landing.jsx
+ │   │   │   └── VideoMeetComponent.jsx
+ │   │   │
+ │   │   ├── utils
+ │   │   │   └── WithAuth.jsx
+ │   │   │
+ │   │   ├── App.jsx
+ │   │   ├── main.jsx
+ │   │   └── index.css
+ │   │
+ │   ├── package.json
+ │   └── vite.config.js
+ │
+ ├── .gitignore
+ └── README.md
 
 # 🔄 Peer-to-Peer Communication
 
