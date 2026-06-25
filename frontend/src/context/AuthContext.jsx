@@ -1,11 +1,12 @@
 /* eslint-disable no-unused-vars */
 import { createContext, useState, useContext } from 'react';
+import servers from '../environment';
 
 // 1. Create the Context
 const AuthContext = createContext();
 
 // IMPROVEMENT: Save your API URL here so it's easy to change later when you deploy!
-const API_URL = 'http://localhost:8080/api/auth';
+const API_URL = `${servers}`;
 
 export const AuthProvider = ({ children }) => {
   
@@ -35,7 +36,7 @@ export const AuthProvider = ({ children }) => {
     setError(null);
     try {
       // IMPROVEMENT: Use the API_URL variable
-      const response = await fetch(`${API_URL}/Login`, {
+      const response = await fetch(`${API_URL}/api/auth/Login`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -72,7 +73,7 @@ export const AuthProvider = ({ children }) => {
     setError(null);
     try {
       // IMPROVEMENT: Use the API_URL variable
-      const response = await fetch(`http://localhost:8080/api/auth/register`, {
+      const response = await fetch(`${API_URL}/api/auth/register`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

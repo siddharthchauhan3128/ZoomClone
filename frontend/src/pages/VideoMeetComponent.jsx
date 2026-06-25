@@ -6,8 +6,9 @@ import React, { useEffect, useRef, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext.jsx';
 import { io } from "socket.io-client";
+import servers from '../environment.js';
 
-const server_url = "http://localhost:8080";
+const server_url =`${servers}`;
 
 const connections = {}
 

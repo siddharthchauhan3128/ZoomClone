@@ -1,6 +1,7 @@
 import { createContext , useState , useContext} from "react";
+import servers from "../environment";
 const HistoryContext = createContext();
-const API_URL = 'http://localhost:8080/api/auth';
+const API_URL = `${servers}/api/auth`;
 
 export const HistoryProvider = ({ children }) => {
     const [history, setHistory] = useState([]);

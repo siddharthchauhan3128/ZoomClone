@@ -49,7 +49,7 @@ const registerUser = async(req,res)=>{
 const LoginUser = async(req,res)=>{
     const {email,password}=req.body;
     if(!email || !password){
-        return res.statusP(400).jsom({
+        return res.status(400).json({
             success:false,
             message:"Please fill all the fields"
         })
