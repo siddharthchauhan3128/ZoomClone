@@ -91,7 +91,7 @@ const Authentication = () => {
               </button>
             </div>
           )}
-          <a href="#" className="hover:text-gray-900 hidden sm:inline">Support</a>
+          <Link to="/support" className="hover:text-gray-900 hidden sm:inline">Support</Link>
           <button className="flex items-center gap-1 hover:text-gray-900 hidden sm:flex">
             English
             <svg className="w-3 h-3 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">

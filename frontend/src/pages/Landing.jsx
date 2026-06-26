@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom';
 
 const Landing = () => {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
@@ -31,9 +32,9 @@ const Landing = () => {
           {/* Left Section: Logo & Main Links */}
           <div className="flex items-center gap-8">
             {/* Logo */}
-            <a href="/" className="text-3xl font-bold tracking-tighter lowercase">
+            <Link href="/" className="text-3xl font-bold tracking-tighter lowercase">
               zoom
-            </a>
+            </Link>
 
             {/* Desktop Navigation Links */}
             <div className="hidden lg:flex items-center gap-6 text-[15px] font-medium">
@@ -53,9 +54,9 @@ const Landing = () => {
                 <ChevronDownIcon />
               </button>
               
-              <a href="/pricing" className="hover:text-slate-200 transition">
+              <Link href="/pricing" className="hover:text-slate-200 transition">
                 Pricing
-              </a>
+              </Link>
             </div>
           </div>
 
@@ -98,36 +99,36 @@ const Landing = () => {
                 
                 {/* The Visible Menu Card */}
                 <div className="flex flex-col bg-white text-slate-900 font-medium rounded-xl shadow-xl py-2 origin-top-left animate-in fade-in zoom-in-95 duration-200">
-                <a href="/join" className="px-5 py-2.5 hover:text-blue-600 hover:bg-slate-50 transition-colors">
+                <Link href="/join" className="px-5 py-2.5 hover:text-blue-600 hover:bg-slate-50 transition-colors">
                     Join a meeting
-                </a>
-                <a href="/host" className="px-5 py-2.5 hover:text-blue-600 hover:bg-slate-50 transition-colors">
+                </Link>
+                <Link href="/host" className="px-5 py-2.5 hover:text-blue-600 hover:bg-slate-50 transition-colors">
                     Host a meeting
-                </a>
-                <a href="/download" className="px-5 py-2.5 hover:text-blue-600 hover:bg-slate-50 transition-colors">
+                </Link>
+                <Link href="/download" className="px-5 py-2.5 hover:text-blue-600 hover:bg-slate-50 transition-colors">
                     Download app
-                </a>
+                </Link>
                 </div>
                 
             </div>
             </div>
 
-            <a href="/signin" className="hover:text-slate-200 transition">
+            <Link href="/signin" className="hover:text-slate-200 transition">
               Sign In
-            </a>
+            </Link>
 
-            <a href="/support" className="hover:text-slate-200 transition">
+            <Link href="/support" className="hover:text-slate-200 transition">
               Support
-            </a>
+            </Link>
 
             {/* Action Buttons */}
             <div className="flex items-center gap-3 ml-2">
-              <a href="/contact" className="bg-white text-slate-900 px-5 py-2.5 rounded-full font-semibold hover:bg-slate-100 transition">
+              <Link href="/contact" className="bg-white text-slate-900 px-5 py-2.5 rounded-full font-semibold hover:bg-slate-100 transition">
                 Contact Sales
-              </a>
-              <a href="/signup" className="bg-[#0b5cff] text-white px-5 py-2.5 rounded-full font-semibold hover:bg-blue-700 transition">
+              </Link>
+              <Link href="/signup" className="bg-[#0b5cff] text-white px-5 py-2.5 rounded-full font-semibold hover:bg-blue-700 transition">
                 Sign Up Free
-              </a>
+              </Link>
             </div>
 
             {/* App Grid Icon */}
@@ -161,20 +162,20 @@ const Landing = () => {
             <button className="flex items-center justify-between border-b border-white/10 pb-3">
               Solutions <ChevronDownIcon />
             </button>
-            <a href="/pricing" className="border-b border-white/10 pb-3" onClick={() => setIsMenuOpen(false)}>
+            <Link href="/pricing" className="border-b border-white/10 pb-3" onClick={() => setIsMenuOpen(false)}>
               Pricing
-            </a>
-            <a href="/signin" className="border-b border-white/10 pb-3" onClick={() => setIsMenuOpen(false)}>
+            </Link>
+            <Link href="/signin" className="border-b border-white/10 pb-3" onClick={() => setIsMenuOpen(false)}>
               Sign In
-            </a>
+            </Link>
             
             <div className="flex flex-col gap-4 pt-4">
-              <a href="/contact" className="bg-white text-slate-900 text-center py-3 rounded-full font-semibold">
+              <Link href="/contact" className="bg-white text-slate-900 text-center py-3 rounded-full font-semibold">
                 Contact Sales
-              </a>
-              <a href="/signup" className="bg-[#0b5cff] text-white text-center py-3 rounded-full font-semibold">
+              </Link>
+              <Link href="/signup" className="bg-[#0b5cff] text-white text-center py-3 rounded-full font-semibold">
                 Sign Up Free
-              </a>
+              </Link>
             </div>
           </div>
         )}
@@ -277,14 +278,14 @@ const Landing = () => {
             
             {/* Social Icons */}
             <div className="flex items-center gap-5">
-              <a href="#" className="hover:text-blue-400 transition"><span className="text-xl font-bold">in</span></a>
-              <a href="#" className="hover:text-blue-400 transition"><span className="text-xl font-bold">X</span></a>
-              <a href="#" className="hover:text-blue-400 transition">
+              <Link href="#" className="hover:text-blue-400 transition"><span className="text-xl font-bold">in</span></Link>
+              <Link href="#" className="hover:text-blue-400 transition"><span className="text-xl font-bold">X</span></Link>
+              <Link href="#" className="hover:text-blue-400 transition">
                 <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>
-              </a>
-              <a href="#" className="hover:text-blue-400 transition">
+              </Link>
+              <Link href="#" className="hover:text-blue-400 transition">
                 <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg>
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -293,52 +294,52 @@ const Landing = () => {
         <div className="lg:w-3/4 grid grid-cols-2 md:grid-cols-4 gap-8 text-[14px]">
           {/* Column 1 */}
           <div className="flex flex-col gap-4 text-slate-300">
-            <a href="#" className="hover:text-white transition">Zoom Blog</a>
-            <a href="#" className="hover:text-white transition">Customers</a>
-            <a href="#" className="hover:text-white transition">Our Team</a>
-            <a href="#" className="hover:text-white transition">Careers</a>
-            <a href="#" className="hover:text-white transition">Integrations</a>
-            <a href="#" className="hover:text-white transition">Partners</a>
-            <a href="#" className="hover:text-white transition">Investors</a>
-            <a href="#" className="hover:text-white transition">Press</a>
-            <a href="#" className="hover:text-white transition">Sustainability & ESG</a>
-            <a href="#" className="hover:text-white transition">Zoom Cares</a>
+            <Link href="#" className="hover:text-white transition">Zoom Blog</Link>
+            <Link href="#" className="hover:text-white transition">Customers</Link>
+            <Link href="#" className="hover:text-white transition">Our Team</Link>
+            <Link href="#" className="hover:text-white transition">Careers</Link>
+            <Link href="#" className="hover:text-white transition">Integrations</Link>
+            <Link href="#" className="hover:text-white transition">Partners</Link>
+            <Link href="#" className="hover:text-white transition">Investors</Link>
+            <Link href="#" className="hover:text-white transition">Press</Link>
+            <Link href="#" className="hover:text-white transition">Sustainability & ESG</Link>
+            <Link href="#" className="hover:text-white transition">Zoom Cares</Link>
           </div>
 
           {/* Column 2 */}
           <div className="flex flex-col gap-4 text-slate-300">
-            <a href="#" className="hover:text-white transition">Zoom Workplace App</a>
-            <a href="#" className="hover:text-white transition">Zoom Rooms App</a>
-            <a href="#" className="hover:text-white transition">Zoom Rooms Controller</a>
-            <a href="#" className="hover:text-white transition">Browser Extension</a>
-            <a href="#" className="hover:text-white transition">Outlook Plug-in</a>
-            <a href="#" className="hover:text-white transition">iPhone/iPad App</a>
-            <a href="#" className="hover:text-white transition">Android App</a>
-            <a href="#" className="hover:text-white transition">Zoom Virtual Backgrounds</a>
+            <Link href="#" className="hover:text-white transition">Zoom Workplace App</Link>
+            <Link href="#" className="hover:text-white transition">Zoom Rooms App</Link>
+            <Link href="#" className="hover:text-white transition">Zoom Rooms Controller</Link>
+            <Link href="#" className="hover:text-white transition">Browser Extension</Link>
+            <Link href="#" className="hover:text-white transition">Outlook Plug-in</Link>
+            <Link href="#" className="hover:text-white transition">iPhone/iPad App</Link>
+            <Link href="#" className="hover:text-white transition">Android App</Link>
+            <Link href="#" className="hover:text-white transition">Zoom Virtual Backgrounds</Link>
           </div>
 
           {/* Column 3 */}
           <div className="flex flex-col gap-4 text-slate-300">
-            <a href="#" className="hover:text-white transition">+1.888.799.9666</a>
-            <a href="#" className="hover:text-white transition">Contact Sales</a>
-            <a href="#" className="hover:text-white transition">Plans & Pricing</a>
-            <a href="#" className="hover:text-white transition">Request a Demo</a>
-            <a href="#" className="hover:text-white transition">Webinars and Events</a>
-            <a href="#" className="hover:text-white transition">Zoom Experience Center</a>
-            <a href="#" className="hover:text-white transition">Zoom for Startups</a>
+            <Link href="#" className="hover:text-white transition">+1.888.799.9666</Link>
+            <Link href="#" className="hover:text-white transition">Contact Sales</Link>
+            <Link href="#" className="hover:text-white transition">Plans & Pricing</Link>
+            <Link href="#" className="hover:text-white transition">Request a Demo</Link>
+            <Link href="#" className="hover:text-white transition">Webinars and Events</Link>
+            <Link href="#" className="hover:text-white transition">Zoom Experience Center</Link>
+            <Link href="#" className="hover:text-white transition">Zoom for Startups</Link>
           </div>
 
           {/* Column 4 */}
           <div className="flex flex-col gap-4 text-slate-300">
-            <a href="#" className="hover:text-white transition">Test Zoom</a>
-            <a href="#" className="hover:text-white transition">Account</a>
-            <a href="#" className="hover:text-white transition">Support Center</a>
-            <a href="#" className="hover:text-white transition">Learning Center</a>
-            <a href="#" className="hover:text-white transition">Zoom Community</a>
-            <a href="#" className="hover:text-white transition">Feedback</a>
-            <a href="#" className="hover:text-white transition">Contact Us</a>
-            <a href="#" className="hover:text-white transition">Accessibility</a>
-            <a href="#" className="hover:text-white transition leading-snug">Privacy, Security, Legal<br/>Policies, and Modern<br/>Slavery Act Transparency<br/>Statement</a>
+            <Link href="#" className="hover:text-white transition">Test Zoom</Link>
+            <Link href="#" className="hover:text-white transition">Account</Link>
+            <Link href="#" className="hover:text-white transition">Support Center</Link>
+            <Link href="#" className="hover:text-white transition">Learning Center</Link>
+            <Link href="#" className="hover:text-white transition">Zoom Community</Link>
+            <Link href="#" className="hover:text-white transition">Feedback</Link>
+            <Link href="#" className="hover:text-white transition">Contact Us</Link>
+            <Link href="#" className="hover:text-white transition">Accessibility</Link>
+            <Link href="#" className="hover:text-white transition leading-snug">Privacy, Security, Legal<br/>Policies, and Modern<br/>Slavery Act Transparency<br/>Statement</Link>
           </div>
         </div>
 

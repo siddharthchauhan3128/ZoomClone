@@ -3,46 +3,49 @@ import bcrypt,{hash} from "bcrypt";
 import crypto from "crypto";
 import Meeting from "../models/meeting.model.js";
 
-const registerUser = async(req,res)=>{
-        const {name,email,username, password}= req.body;
-        if(!name || !email || !username || !password){
-            return res.status(400).json({
-                success: false,
-                message: "Please fill all the fields"
-                })
-        }
+const registerUser = async(req, res) => {
+    const { name, email, username, password } = req.body;
+    
+    if(!name || !email || !username || !password){
+        return res.status(400).json({
+            success: false,
+            message: "Please fill all the fields"
+        });
+    }
 
-    try{
-        const existingUser = await User.findOne({email});
+    try {
+        const existingUser = await User.findOne({ email });
         if(existingUser){
             return res.status(400).json({
                 success: false,
-                message:"User already exists"
-            })
+                message: "User already exists"
+            });
         }
 
-        const hashedPassword = await bcrypt.hash(password,10);
-        const token = crypto.randomBytes(20).toString('hex');
-        user.token = token;
-        await user.save();
-
+        const hashedPassword = await bcrypt.hash(password, 10);
+        
+        // 1. Create the user instance first
         const user = new User({
             name,
             email,
             username,
-            password:hashedPassword
+            password: hashedPassword
         });
 
-        await user.save();
+        // 2. Now you can safely generate the token and save
+        const token = crypto.randomBytes(20).toString('hex');
+        user.token = token;
+
+        await user.save(); // This saves the user WITH the token
 
         res.status(201).json({
             success: true,
             message: "User registered successfully",
-            data: user
-        })
-    }catch(err){
+            data: user // This will now include the token and the _id
+        });
+    } catch(err) {
         console.log(err);
-        return res.status(500).json({message:"Internal server error"});
+        return res.status(500).json({ message: "Internal server error" });
     }
 }
 
