@@ -60,7 +60,7 @@ export const AuthProvider = ({ children }) => {
 
     setUser(user);
     localStorage.setItem('user', JSON.stringify(user));
-    localStorage.setItem('token', user.token); 
+    localStorage.setItem('token', data.user.token); 
     
       return { success: true, userId: data.user._id };
     } catch (err) {
@@ -88,11 +88,11 @@ export const AuthProvider = ({ children }) => {
       }
 
       setUser(data.user);
-      console.log(data);
+      console.log("userData :",data.user);
       localStorage.setItem('user', JSON.stringify(data.user));
-      localStorage.setItem('token', data.token);
+      localStorage.setItem('token', data.user.token);
 
-      return { success: true, userId: data._id };
+      return { success: true, userId: data.user._id };
     } catch (err) {
       setError(err.message);
       return { success: false, error: err.message };

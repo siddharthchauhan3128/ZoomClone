@@ -41,7 +41,7 @@ const registerUser = async(req, res) => {
         res.status(201).json({
             success: true,
             message: "User registered successfully",
-            data: user // This will now include the token and the _id
+            user: user // This will now include the token and the _id
         });
     } catch(err) {
         console.log(err);
