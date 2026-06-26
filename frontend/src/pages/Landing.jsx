@@ -113,9 +113,14 @@ const Landing = () => {
             </div>
             </div>
 
-            <Link to="/signin" className="hover:text-slate-200 transition">
-              Sign In
-            </Link>
+            <button
+                onClick={() => {
+                  console.log("clicked");
+                  navigate("/signin"); // Fixed: Added missing semicolon
+                }}
+              >
+                Sign In
+              </button>
 
             <Link to="/support" className="hover:text-slate-200 transition">
               Support
