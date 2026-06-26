@@ -1,9 +1,11 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const Landing = () => {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const navigate = useNavigate();
 // 2. Define a clear handler function
   const handleSearchClick = () => {
     setIsSearchOpen(true); 
