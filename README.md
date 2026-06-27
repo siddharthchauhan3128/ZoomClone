@@ -30,7 +30,7 @@ A real-time **peer-to-peer video conferencing application** built using **React*
 * Socket.IO Client
 * WebRTC API
 * Vite
-* CSS
+* Tailwind CSS
 
 ## Backend
 
